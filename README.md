@@ -1,4 +1,4 @@
-!["Форум знаний Foxes.ru"](src\fproject\static\pictures\lisa-osen-listva.jpg)
+!["Форум знаний Foxes.ru"](src\fproject\static\pictures\fox.png)
 # Форум знаний Foxes.ru
  ## Описание
  
