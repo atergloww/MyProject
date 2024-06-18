@@ -1,0 +1,66 @@
+{% extends 'base_acc.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <a href=\ class="side-button-2">+</a>
+        <a href=\auth class="side-button-3">Вход</a>
+        <h1>Регистрация</h1>
+
+        <form method="post" action="add_acc" id="add-form">
+            <div class="input-box">
+                <input type="text" name="username" id="username" class="input-field" placeholder="Логин">
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="password" id="password" class="input-field" placeholder="Пароль">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="name" name="name" class="input-field" placeholder="Имя">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="about_me" name="about_me" class="input-field" placeholder="Обо мне">
+            </div>
+
+            <div class="input-box">
+                <input type="text" id="phone_number" name="phone_number" class="input-field" placeholder="Номер телефона">
+            </div>
+
+            <div class="input-clean">
+                <button type="submit">Сохранить</button>
+                <input type="button" value="Очистить" class= "clean" onclick="clean()">
+            </div>
+        </form>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert-danger1">
+        {% for message in messages %}
+            {{ message }}
+          {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <script defer>
+
+        function clean() {
+            document.getElementById('username').value = "";
+            document.getElementById('password').value = "";
+            document.getElementById('name').value = "";
+            document.getElementById('about_me').value = "";
+            document.getElementById('phone_number').value = "";
+            document.getElementById('username').style.backgroundColor = "white";
+            document.getElementById('password').style.backgroundColor  = "white";
+            document.getElementById('name').style.backgroundColor = "white";
+            document.getElementById('about_me').style.backgroundColor = "white";
+            document.getElementById('phone_number').style.backgroundColor = "white";
+        }
+
+    </script>
+
+{% endblock %}

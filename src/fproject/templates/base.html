@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="static\pictures\images(and gif)\fox.png">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+        <title>Форум знаний Foxes.ru</title>
+    </head>
+    <body class="body">
+
+        <div class="fon">
+            <div class="menu">
+                <img src="static\pictures\images(and gif)\gifka.gif" alt="лисичка" class="gifka">
+                <p class="text" align="center">FOXes.RU</p>
+                {% if current_user.is_authenticated %}
+                <form action="\logout">
+                    <button>Выйти</button>
+                </form>
+                {% else %} 
+                <form action="\auth">
+                    <button>Войти/Регистрация</button>
+                </form>
+                {% endif %}
+            </div>
+
+            <hr>
+
+            <ul class="menu-main">
+                {% block menu %}
+                {% endblock %}
+            </ul>
+
+            {% block content %}
+            {% endblock %}
+
+            <div class="footer">
+                <a href="https://t.me/exploitex"><img src="static\pictures\images(and gif)\telegramm.png"></a>
+                <a href=\error><img src="static\pictures\images(and gif)\inst.png"></a>
+                <a href="https://vk.com/improcom"><img src="static\pictures\images(and gif)\vkontakte.png"></a>
+
+                <div class="footer_t">
+                    <p>
+                        Телефон: <a href="tel:+71234567890"> +7 123 456-78-90</a>
+                        <br>Электронная почта: <a href="mailto:artsiren@yandex.ru">info@example.com</a>
+                    </p>
+
+                    <p><a href=\>Мой форум</a></p>
+                    <p><a href=\rubrics>Рубрики</a></p>
+                    <p><a href=\popular>Популярное</a></p>
+                    <p><a href=\new>Новое</a></p>
+                </div>
+                <p>©2021 Knowledge Forum | All rights reserved</p>
+
+            </div>
+           
+
+
+        </div>
+
+    </body>
+
+</html>

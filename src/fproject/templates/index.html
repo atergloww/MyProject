@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href=\ class="current">Мой форум</a></li>
+    <li><a href=\new>Новое</a></li>
+    <li><a href=\popular>Популярное</a></li>
+    <li><a href=\rubrics>Рубрики</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="main">
+            <h2>МОЙ ФОРУМ</h2>
+            <h4><a href=\error>Очистить историю</a></h4>
+            <p>
+                Вы пользуетесь форумом как Аноним, с этого устройства будут доступны все темы в "Моем форуме".
+                Чтобы сохранить свои темы и настройки для любого устройства нужно <a href=\auth>Войти</a> или <a href=\add_acc>Зарегистрироваться</a>
+            </p>
+            <div class="test">
+                <h3>Выбор редакции</h3>
+                <a href="https://dzen.ru/a/ZU-bQjs_Ry41JChh"><p>Тест: проверьте, насколько хорошо вы знаете древних шумеров</p></a>
+            </div>
+        </div>
+        <div class="side">
+            <h2>Обо мне</h2>
+            <h5>Карточка профиля:</h5>
+            <div class="fakeimg">
+                <img class="lisa" src="static\pictures\images(and gif)\lisa-cher.jpg" alt="Image">
+                <h3 align="right">Установлено по умолчанию</h3>
+                <p align="right">Чтобы изменить фото необходима регистрация на сайте!</p>
+            </div>
+            <p>Вы не можете редактировать профиль пока не пройдете <a href=\add_acc>Регистрацию</a> или не <a href=\auth>Войдете в аккаунт</a>. Все изменения внесенные в режиме Аноним не сохраняются. </p>
+        </div>
+    </div>
+{% endblock %}
+

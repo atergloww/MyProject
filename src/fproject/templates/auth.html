@@ -1,0 +1,49 @@
+{% extends 'base_acc.html' %}
+
+{% block title %}Авторизация{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert-danger">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+    <div class="container">
+        <a href=\ class="side-button-2">+</a>
+        <a href=\add_acc class="side-button-3">Регистрация</a>
+        <h1>Вход</h1>
+
+        <form method="post" action="auth" id="add-form">
+            <div class="input-box">
+                <input type="text" name="username" id="username" class="input-field" placeholder="Логин" required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" id="password" class="input-field" placeholder="Пароль" required>
+            </div>
+
+            <div class="input-clean">
+                <button>Войти</button>
+                <input type="button" value="Очистить" class="clean" onclick="clean()">
+            </div>
+        </form>
+
+    </div>
+
+    <script defer>
+        
+        function clean() {
+            document.getElementById('username').value = "";
+            document.getElementById('password').value = "";
+            document.getElementById('username').style.backgroundColor = "white";
+            document.getElementById('password').style.backgroundColor  = "white";
+        }
+
+    </script>
+
+{% endblock %}

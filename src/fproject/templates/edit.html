@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href=\ class="current">Мой форум</a></li>
+    <li><a href=\new>Новое</a></li>
+    <li><a href=\popular>Популярное</a></li>
+    <li><a href=\rubrics>Рубрики</a></li>
+{% endblock %}
+
+
+{% block content %}
+<div class="side">
+    <a href=\ class="return" align="right">+</a>
+    <h2>Редактирование</h2>
+    <h5>Карточка профиля:</h5>
+    <div class="edit">
+        <img class="lisa" src="static\pictures\images(and gif)\cat.jpg" alt="Image">
+        <form method="post" class="form">
+            <div class="input-box">
+                <input type="text" name="username" id="username" class="input-field" placeholder="Логин" value="{{ user.username }}"  required>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" id="password" class="input-field" placeholder="Пароль" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="name" id="name" class="input-field" placeholder="Имя" value="{{ user.name }}" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="about_me" id="about_me" class="input-field" placeholder="Обо мне" value="{{ user.about_me }}" required>
+            </div>
+
+            <div class="input-box">
+                <input type="text" name="phone_number" id="phone_number" class="input-field" placeholder="Номер телефона" value="{{ user.phone_number }}" required>
+            </div>
+
+            <div class="input-clean">
+                <button type="submit">Сохранить</button>
+                <a href=\delete  class="delete">Удалить аккаунт</a>
+            </div>
+            
+        </form>
+    </div>
+</div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+{% endif %}
+{% endwith %}
+
+{% endblock %}

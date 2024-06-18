@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href=\>Мой форум</a></li>
+    <li><a href=\new>Новое</a></li>
+    <li><a href=\popular>Популярное</a></li>
+    <li><a href=\rubrics class="current">Рубрики</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="rybrcs">
+        <div class="nav">
+            <p><a href="\error"><img class="circle" src="static\pictures\images(and gif)\sience.png" alt="" /></a></p>
+            <p class="string">НАУКА И ТЕХНИКА</p>
+        </div>
+        <div class="nav">
+            <p><a href="\error"><img class="circle" src="static\pictures\images(and gif)\list.png" alt="" /></a></p>
+            <p class="string">МЕДИЦИНА И КРАСОТА</p>
+        </div>
+        <div class="nav">
+            <p><a href="\error"><img class="circle" src="static\pictures\images(and gif)\pet.png" alt="" /></a></p>
+            <p class="string">ЖИВОТНЫЙ МИР</p>
+        </div>
+        <div class="nav">
+            <p><a href="\error"><img class="circle" src="static\pictures\images(and gif)\is.png" alt="" /></a></p>
+            <p class="string">ИСКУССТВО БЕЗ ГРАНИЦ</p>
+        </div>
+        <div class="nav">
+            <p><a href="\new"><img class="circle" src="static\pictures\images(and gif)\star.png" alt="" /></a></p>
+            <p class="string">ИНТЕРЕСНОЕ</p>
+        </div>
+    </div>
+
+    <marquee scrollamount="15">
+        <img src="static\pictures\images(and gif)\lisa-animatsiia-1.gif" alt="лисичка" class="fox">
+    </marquee>
+{% endblock %}

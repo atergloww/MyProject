@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href=\>Мой форум</a></li>
+    <li><a href=\new>Новое</a></li>
+    <li><a href=\popular class="current">Популярное</a></li>
+    <li><a href=\rubrics>Рубрики</a></li>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="side">
+            <h2>Шиншиллы или котики? А что выберете вы?</h2>
+            <h4><a href="\error">Читать...</a></h4>
+            <div class="fakeimg" style="height: 200px;"><img class="popular_img" src="static\pictures\images(and gif)\shysha.jpg"></div>
+            <p>Мы дадим ответ на вопрос, который волнует человечество на протяжении многих веков</p>
+        </div>
+        <div class="side">
+            <h2>Помидоры в жизни современного человека</h2>
+            <h4><a href="\error">Читать...</a></h4>
+            <div class="fakeimg" style="height: 200px;"><img class="popular_img" src="static\pictures\images(and gif)\tomato.jpg"></div>
+            <p>Коротко о главном: что это такое и с чем это едят?</p>
+        </div>
+        <div class="side">
+            <h2>Гомеостаз организма: что это такое</h2>
+            <h4><a href="\error">Читать...</a></h4>
+            <div class="fakeimg" style="height: 200px;"><img class="popular_img" src="static\pictures\images(and gif)\gomeostaz.jpg"></div>
+            <p>Гомеостаз обеспечивается двумя противоположными типами химических реакций:...</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="side">
+            <h2>Люди, которые играют в игры, игры в которые играют люди</h2>
+            <h4><a href="\error">Читать...</a></h4>
+            <div class="fakeimg" style="height: 200px;"><img class="popular_img" src="static\pictures\images(and gif)\games.jpg"></div>
+            <p> Психология человеческих взаимоотношений. Как научиться избегать конфликтов с окружающими.</p>
+        </div>
+        <div class="side">
+            <h2>Чтоб жизнь малиной не казалась</h2>
+            <h4><a href="\error">Читать...</a></h4>
+            <div class="fakeimg" style="height: 200px;"><img class="popular_img" src="static\pictures\images(and gif)\malina.jpeg"></div>
+            <p>А может чтоб жизнь медом не казалась?..</p>
+        </div>
+        <div class="side">
+            <h2>Просто о сложном. Двигатель</h2>
+            <h4><a href="\error">Читать...</a></h4>
+            <div class="fakeimg" style="height: 200px;"><img class="popular_img" src="static\pictures\images(and gif)\dvigatel.jpg"></div>
+            <p>Одноцилиндровый двигатель: что это, плюсы и минусы ...</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,509 @@
+.fox {
+    width: 150px;
+    height: 80px;
+  }
+  
+.body {
+    margin: 0;
+    /* background-image: url(https://img.goodfon.ru/original/1920x1080/5/82/lis-lisa-osen-listva-1.jpg); */
+    background: #746d65;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding: 0 200px 0 200px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.fon {
+    background: white;
+}
+  
+  a {
+      text-decoration: none;
+      color: #e77834;
+  }
+  
+  .menu {
+    padding: 40px;
+    background: #feb386;
+  }
+  .text {
+      margin: 0px;
+      font-size: 73px;
+      color: #341e05;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  hr {                                                                                 
+      color: #793f24;
+      border-width: 3px;
+      border-color: #793f24;
+      margin: 0;
+      width: 96%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto
+  }
+  
+  
+button {
+      text-decoration: none;
+      font-family: 'Ubuntu Condensed', sans-serif;
+      letter-spacing: 2px;
+      font-size: 15px;
+      text-transform: uppercase;
+      padding: 10px;
+      background: #ffffff;
+      color: #e77834;
+      border-radius: 10px;
+  }
+  .menu button {
+      position: absolute;
+      right: 245px;
+      top: 35px;
+  }
+  button:hover {
+    color: #fff;
+    background: #e77834;
+    transition: all .2s linear;
+  }
+  .gifka {
+      width: 130px; height: 130px;
+      position: absolute;
+      left: 270px;
+      top: 52px;
+  }
+  
+  .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      height: 55%;
+      padding: 17px;
+  }
+  .popular_img {
+      width: 84%;
+      height: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .lisa {
+      width: 30%;
+      height: 100%;
+      float: left;
+      border-radius: 100%;
+      margin-right: 10px;
+  }
+  
+  .row {
+      display:flex;
+  }
+  .side {
+      background-color: #f1f1f1;
+      padding: 20px;
+  }
+  .main {
+      flex: 70%;
+      background-color: #f1f1f1;
+      padding: 20px;
+  }
+  
+  * {
+      box-sizing:border-box;
+  }
+  
+  .footer {
+      padding: 20px;
+      text-align: center;
+      background: #341e05;
+      display: block;
+  }
+      .footer img {
+          margin-top: 30px;
+          width: 60px;
+          vertical-align: top;
+          padding: 10px;
+      }
+      .footer p {
+          color: #aaa;
+          font-size: 10px;
+          font-family: 'Comic Sans MS', cursive, sans-serif;
+          margin-top:1px;
+      }
+      .footer a {
+          color: #aaa;
+      }
+  .footer_t {
+      display: flex;
+      justify-content: center;
+  }
+      .footer_t p {
+          padding: 10px;
+          margin-top:20px;
+          margin-right: 70px;
+          color: #aaa;
+          text-align: left;
+          font-size: 13px;
+          font-family: 'Comic Sans MS', cursive, sans-serif;
+      }
+  
+  
+  
+  @media screen and (max-width: 700px) {
+      .row {
+          flex-direction:column;
+      }
+  }
+  @media screen and (max-width: 400px) {
+      .navbar a {
+          float: none;
+          width: 100%;
+      }
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+  
+  .menu-main {
+      list-style: none;
+      margin: 20px 0 20px;
+      padding: 5px 0 10px;
+      text-align: center;
+      background: white;
+      position: sticky;
+  }
+  
+      .menu-main li {
+          display: inline-block;
+      }
+  
+          .menu-main li:after {
+              content: "|";
+              color: #606060;
+              display: inline-block;
+              vertical-align: top;
+          }
+  
+          .menu-main li:last-child:after {
+              content: none;
+          }
+  
+      .menu-main a {
+          font-family: 'Ubuntu Condensed', sans-serif;
+          letter-spacing: 2px;
+          position: relative;
+          padding-bottom: 10px;
+          margin: 0 34px 0 30px;
+          font-size: 17px;
+          text-transform: uppercase;
+          display: inline-block;
+          transition: color .2s;
+      }
+  
+          .menu-main a, .menu-main a:visited {
+              color: #9d999d;
+          }
+  
+              .menu-main a.current, .menu-main a:hover {
+                  color: #feb386;
+              }
+  
+              .menu-main a:before,
+              .menu-main a:after {
+                  content: "";
+                  position: absolute;
+                  height: 4px;
+                  top: auto;
+                  right: 50%;
+                  bottom: -5px;
+                  left: 50%;
+                  background: #feb386;
+                  transition: .8s;
+              }
+  
+              .menu-main a:hover:before, .menu-main .current:before {
+                  left: 0;
+              }
+  
+              .menu-main a:hover:after, .menu-main .current:after {
+                  right: 0;
+              }
+  
+  @media (max-width: 550px) {
+      .menu-main {
+          padding-top: 0;
+      }
+  
+          .menu-main li {
+              display: block;
+          }
+  
+              .menu-main li:after {
+                  content: none;
+              }
+  
+          .menu-main a {
+              padding: 25px 0 20px;
+              margin: 0 30px;
+          }
+  }
+  
+  .nav {
+      display: inline-block;
+      width: 19.5%;
+      vertical-align: top;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      padding:30px;
+  }
+      .nav a:hover img {
+          background: #e77834;
+          transform: scale(1.1);
+      }
+      .nav a img {
+          transition: transform 0.5s;
+      }
+  
+  .string {
+      text-align: center;
+      font-family: 'Ubuntu Condensed', sans-serif;
+      letter-spacing: 2px;
+      font-size: 15px;
+      color: #e77834;
+  }
+  
+  .circle {
+      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background: #aaa;
+      padding: 14px;
+  }
+  
+  .test {
+      background: #aaa;
+      padding: 20px;
+  }
+      .test p {
+          background: white;
+          border-radius: 7px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.5);
+          padding: 10px;
+          color: #606060;
+      }
+          .test p:hover {
+              color: #fff;
+              background: #e77834;
+          }
+  
+  .novinka {
+      padding: 5px;
+      background-color: #e77834;
+      margin-left: 40px;
+      margin-top: 50px;
+      width: 310px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+      .novinka p {
+          text-align: center;
+          font-family: 'Ubuntu Condensed', sans-serif;
+          letter-spacing: 2px;
+          font-size: 21px;
+          color: #341e05;
+      }
+  
+  .hide {
+      display: none;
+  }
+  
+      .hide + label ~ div {
+          display: none;
+      }
+      .hide + label {
+          padding: 20px;
+          color: #413939;
+          cursor: pointer;
+          display: inline-block;
+      }
+      .hide:checked + label {
+          color: #341e05;
+          border-bottom: 0;
+          background: #feb386;
+          width: 100%;
+      } 
+      .hide:checked + label + div {
+          display: block;
+          background: #efefef;
+          -moz-box-shadow: inset 2px 2px 2px #7d8e8f;
+          -webkit-box-shadow: inset 2px 2px 2px #7d8e8f;
+          box-shadow: inset 1px 1px 3px #7d8e8f;
+          padding: 20px;
+      }
+  
+  .demo {
+      margin: 5% 10%;
+      background: #aaa;
+  }
+  
+  .errorr img {
+      margin: 0px auto 0px auto;
+      display: block;
+      width: 80%;
+  }
+  .errorr button {
+      margin: 0px auto 0px auto;
+      display: block;
+  }
+  .errorr {
+      padding-bottom: 175px;
+  }
+  
+  .container {
+      width: 420px;
+      margin: 0 auto;
+      padding: 40px 34px;
+      background-color: white;
+      border-radius: 15px;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 30%;
+  }
+  
+  .container h1 {
+      text-align:center;
+      padding-bottom: 30px;
+      color: #341e05;
+  }
+
+  
+  .gifk {
+      width: 100px;
+      position: absolute;
+      top: 11%;
+      left: 20%;
+  }
+  
+  .input-clean {
+      display: inline-block;
+      margin: 15px auto;
+  }
+      .clean {
+          margin-left: 45px;
+          text-decoration: none;
+          font-size: 10px;
+          text-transform: uppercase;
+          padding: 10px;
+          background: #c2bab5;
+          color: #ffffff;
+          border-radius: 10px;
+      }
+        .input-clean button {
+          font-size: 15px;
+          padding: 14px 45px;
+          margin-top: 20px;
+          margin-left: 10px;
+          color: #fff;
+          background: #f5ad7f;
+      }
+      .input-clean button:hover {
+          color: #fff;
+          background: #e77834;
+          transition: all .2s linear;
+      }
+
+  .container form {
+      box-sizing: border-box;
+  }
+  
+  .input-field {
+      width: 100%;
+      border: 3px solid orange;
+      border-radius: 0;
+      padding: 16px 23px;
+      margin-bottom: 12px;
+      font-size: 17px;
+  }
+  
+  
+  .error .input-field {
+      border-color: red;
+  }
+  
+  .error-label {
+      color: red;
+      display: block;
+      margin-bottom: 10px;
+  }
+  
+  
+  .side-button-2 {
+      font-size: 30px;
+      border-radius: 20px;
+      position: absolute;
+      z-index: 1;
+      top: 8px;
+      right: 12px;
+      cursor: pointer;
+      transform: rotate(45deg);
+      transition: all 280ms ease-in-out;
+      color: #341e05;
+  }
+      .side-button-2:hover {
+          transform: rotate(45deg) scale(1.2);
+      }
+
+.side-button-3 {
+    font-size: 17px;    
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 15px;
+    cursor: pointer;
+    transition: all 280ms ease-in-out;
+    color: #606060;
+}
+    .side-button-3:hover {
+        text-decoration: underline;
+    }
+
+.edit {
+    display: flex;
+    background-color: #aaa;
+    padding: 20px;
+}
+.edit img {
+    margin: 20px;
+}
+.form {
+    margin: 20px;
+    width: 100%;
+}
+
+.delete {
+    margin: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 10px;
+    background: #efe8e3;
+    color: #0b0b0b;
+    border-radius: 10px;
+    border: 1.5px solid black;;
+}
+
+.return {
+    float: right;
+    font-size: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: all 280ms ease-in-out;
+    color: #341e05;
+}
+    .return:hover {
+        transform: rotate(45deg) scale(1.2);
+    }

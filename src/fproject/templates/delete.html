@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="side">
+    <h1>Удаление аккаунта</h1>
+    <p>Вы действительно хотите удалить аккаунт "{{ user.name }}"?</p>
+    <form method="post">
+        <div class="input-clean">
+            <button>Удалить</button>
+        </div>
+        <a href="\edit" class="delete">Отмена</a>
+    </form>
+</div>
+
+{% endblock %}

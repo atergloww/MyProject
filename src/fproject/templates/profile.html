@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block menu %}
+    <li><a href=\ class="current">Мой форум</a></li>
+    <li><a href=\new>Новое</a></li>
+    <li><a href=\popular>Популярное</a></li>
+    <li><a href=\rubrics>Рубрики</a></li>
+{% endblock %}
+
+
+{% block content %}
+    <div class="row">
+        <div class="main">
+            <h2>МОЙ ФОРУМ</h2>
+            <h4><a href=\error>Очистить историю</a></h4>
+            <p>
+                Вы пользуетесь форумом как Пользователь.
+                Ваши темы и настройки для любого устройства будут сохраняться автоматически.
+            </p>
+            <div class="test">
+                <h3>Выбор редакции</h3>
+                <a href="https://dzen.ru/a/ZU-bQjs_Ry41JChh"><p>Тест: проверьте, насколько хорошо вы знаете древних шумеров</p></a>
+                <a href="https://ustaliy.ru/chto-vy-znaete-o-tomatah-proverte-sebya-s-pomoshhyu-testa/"><p>Тест: что вы знаете о томатах?</p></a>
+            </div>
+        </div>
+
+        <div class="side">
+            <h2>Пользователь</h2>
+            <h5>Карточка профиля:</h5>
+            <div class="fakeimg">
+                <img class="lisa" src="static\pictures\images(and gif)\cat.jpg" alt="Image">
+                <h3 align="center">{{ user.name }}</h3>
+                
+                <p align="left">О себе: {{ user.about_me }}</p>
+                <p align="left">Тел.: {{ user.phone_number }}</p>
+                <p align="left"><a href=\error>Мои посты</a></p>
+            </div>
+            <p align="left"><a href=\edit>Нажмите</a>, чтобы редактировать профиль</p>
+            <h6>Функция редактирования аватарки временно недоступна, приносим свои извинения:(</h6>
+        </div>
+    </div>
+{% endblock %}
