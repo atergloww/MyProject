@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="static\pictures\images(and gif)\fox.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <title>Форум знаний Foxes.ru</title>
+</head>
+<body>
+    <div class="fon">
+        <div>
+            <lottie-player 
+            src="{{ url_for('static', filename='json/animate.json') }}"
+            background="transparent"  speed="1"
+            style="height: 400px; width: 704px; margin-left: 27%;"
+            autoplay>
+        </div>
+        <button style="margin-left: 47%; margin-right: auto; margin-top: -30%;" onclick="document.location='/'">На Главную</button>
+    </div>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>

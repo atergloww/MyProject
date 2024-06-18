@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-from flask import Flask, render_template, url_for, redirect, request, flash
+from flask import Flask, render_template, url_for, redirect, request, flash, abort
 from models import Post, User, db
 from flask_login import LoginManager, login_user, current_user, logout_user
 from werkzeug.security import check_password_hash, generate_password_hash
@@ -40,7 +40,7 @@ def rubrics():
 
 @app.route('/error')
 def error():
-    return render_template('error.html')
+    abort(404)
 
 @app.route('/auth', methods=['GET', 'POST'])
 def auth():
@@ -118,6 +118,41 @@ def delete():
         return redirect(url_for('index'))
     return render_template('delete.html', user=current_user)
 
+@app.errorhandler(400)
+def bad_request(e):
+    return render_template('400.html'), 400
+
+@app.errorhandler(401)
+def unauthorized(e):
+    return render_template('401.html'), 401
+
+@app.errorhandler(403)
+def forbidden(e):
+    return render_template('403.html'), 403
+
+@app.errorhandler(404)
+def not_found_error(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(405)
+def method_not_allowed(e):
+    return render_template('405.html'), 405
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('500.html'), 500
+
+@app.errorhandler(501)
+def not_implemented(e):
+    return render_template('501.html'), 501
+
+@app.errorhandler(502)
+def bad_gateway(e):
+    return render_template('502.html'), 502
+
+@app.errorhandler(503)
+def service_unavailable(e):
+    return render_template('503.html'), 503
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0")
